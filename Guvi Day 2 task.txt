@@ -1,4 +1,4 @@
-2.
+2.to print all flag ?
 var xhr = new XMLHttpRequest();
 xhr.open('GET', 'https://restcountries.com/v3.1/all');
 xhr.responseType = 'json';
@@ -7,11 +7,67 @@ xhr.send();
 
 xhr.onload = function () {
     var responseObj = xhr.response;
-    // console.log(responseObj[0].flag);
-    // console.log(responseObj);
-    // console.log(responseObj[0].flag);
     for(var i = 0; i <= responseObj.length; i++) {
     console.log(responseObj[i].flag)
     }
 }
+---------------------------------------------------------------------------
+(II) this program for print the population 
+var xhr = new XMLHttpRequest();
+xhr.open('GET', 'https://restcountries.com/v3.1/all');
+xhr.responseType = 'json';
+
+xhr.send();
+
+xhr.onload = function () {
+    var responseObj = xhr.response;
+    for(var i = 0; i < responseObj.length; i++) {
+    console.log(responseObj[i].population)
+    }
+}
+-------------------------------------------------------------------------------
+(III) this program for print the subregion ?
+var xhr = new XMLHttpRequest();
+xhr.open('GET', 'https://restcountries.com/v3.1/all');
+xhr.responseType = 'json';
+
+xhr.send();
+
+xhr.onload = function () {
+    var responseObj = xhr.response;
+    for(var i = 0; i < responseObj.length; i++) {
+    console.log(responseObj[i].subregion)
+    }
+}
+-----------------------------------------------------------------------------------
+(IV) this program for print the region ?
+var xhr = new XMLHttpRequest();
+xhr.open('GET', 'https://restcountries.com/v3.1/all');
+xhr.responseType = 'json';
+
+xhr.send();
+
+xhr.onload = function () {
+    var responseObj = xhr.response;
+    for(var i = 0; i < responseObj.length; i++) {
+    console.log(responseObj[i].region)
+    }
+}
+-----------------------------------------------------------------------------------
+(V) this program for print the all countries names ?
+var xhr = new XMLHttpRequest();
+xhr.open('GET', 'https://restcountries.com/v3.1/all');
+xhr.responseType = 'json';
+
+xhr.send();
+
+xhr.onload = function () {
+    var responseObj = xhr.response;
+    for(var i = 0; i < responseObj.length; i++) {
+    console.log(responseObj[i].name.common)
+    }
+}
+
+
+
 
