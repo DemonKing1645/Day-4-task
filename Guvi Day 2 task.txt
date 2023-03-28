@@ -1,3 +1,12 @@
+1.
+let user = { name:"person1", age:5 };
+let user1 = { age:5, name: "person 1"};
+var result = JSON.stringify(user) === JSON.stringify(user1);
+console.log("user: " + JSON.stringify(user));
+console.log("user1: " +JSON.stringify(user1));
+console.log("user: " +Object.entries(user).toString());
+console.log("user1: " + Object.entries(user1).toString());
+// console.log(result);
 2.to print all flag ?
 var xhr = new XMLHttpRequest();
 xhr.open('GET', 'https://restcountries.com/v3.1/all');
